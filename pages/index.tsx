@@ -18,7 +18,7 @@ export default function Home() {
     setResult([]);
 
     const res = await axios.post(
-      'http://localhost:3000/api/predict',
+      `${process.env.API_URL}predict`,
       {
         text: form.getFieldValue('text')
       },
